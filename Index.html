@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Layouts and Responsive Design</title>
+</head>
+<style>
+    body {
+        font-family: Poppins, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #004770;
+    }
+    h2 {
+        color: #0078af;
+        text-align: center;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;}
+     footer {
+        background-color: #000;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: right;
+        list-style: none;
+        padding: 20px;
+        margin: 0;
+        background-color: #141010;
+        border-bottom: 2px solid #ccc;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    }
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 10px 15px;
+    }
+
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    section {
+        flex: 1 1 calc(48% - 20px);
+        background: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+        padding: 10px 0;
+        background-color: #333;
+        color: white;
+    }
+
+    @media (max-width: 768px) {
+        nav ul {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        main {
+            flex-direction: column;
+        }
+
+        section {
+            flex: 1 1 100%;
+        }
+    }
+
+    @media (max-width: 480px) {
+        nav ul li a {
+            padding: 8px 10px;
+            font-size: 14px;
+        }
+
+        section {
+            padding: 15px;
+        }
+    }
+</style>
+<body>
+    
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="home">
+            <h2>Welcome to Responsive </h2>
+            <p>We are responsive and leading team in web managament and deevelopment.</p>
+        </section>
+        <section id="about">
+            <h2>About </h2>
+            <p>We are leading in web deevelopment and technology.</p>
+        </section>
+        <section id="services">
+            <h2>Our Services </h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure id dignissimos animi enim omnis vero consequatur, quibusdam,
+                 autem culpa officia aspernatur. Perspiciatis sit illo debitis nobis tempora enim corporis ab!.</p>
+        </section>
+        <section id="contact">
+            <h2>Contact Section</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit aut cum, perferendis minus minima veritatis repudiandae
+                 autem accusantium nam rem facilis doloribus necessitatibus totam beatae exercitationem. Nihil nesciunt culpa sapiente?</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy;All rights reserved copyright 2025</p>
+    </footer>
+    <script src="script.js"></script>    
+</html>
